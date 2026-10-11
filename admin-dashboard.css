@@ -1,0 +1,144 @@
+
+.dashboard-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 50px 0 45px;
+}
+
+.dashboard-tab {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    min-height: 100px;
+    padding: 25px 30px;
+    border: 1px solid #3a4552;
+    background: #151b22;
+    color: #c7d0da;
+    font-family: 'Manrope', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background .25s, color .25s;
+}
+
+.dashboard-tab > span:first-child {
+    font-size: 11px;
+    color: #8c9aaa;
+}
+
+.dashboard-tab-arrow {
+    margin-left: auto;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.dashboard-tab:hover {
+    background: #28313b;
+    color: white;
+}
+
+.dashboard-tab.active {
+    background: #f2f4f6;
+    color: #0a0e13;
+    border-color: #f2f4f6;
+}
+
+.dashboard-tab.active > span:first-child {
+    color: #657181;
+}
+
+.dashboard-panel[hidden] {
+    display: none !important;
+}
+
+.dashboard-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.dashboard-section-heading span {
+    display: block;
+    margin-bottom: 15px;
+    color: #a3afbd;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.dashboard-section-heading h2 {
+    margin: 0;
+    color: #fff;
+    font-family: 'Manrope', Arial, sans-serif;
+    font-size: clamp(30px, 4.5vw, 58px);
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.dashboard-section-heading p {
+    max-width: 310px;
+    color: #aeb9c6;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#dashboard-messages .admin-messages {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.dashboard-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 90px;
+    padding: 30px 0;
+    border-top: 1px solid #34404c;
+    color: #a1adba;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.dashboard-tab:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .dashboard-tabs {
+        gap: 8px;
+        margin: 35px 0;
+    }
+
+    .dashboard-tab {
+        min-height: 75px;
+        padding: 15px;
+        gap: 9px;
+        font-size: 11px;
+    }
+
+    .dashboard-tab-arrow {
+        font-size: 17px;
+    }
+
+    .dashboard-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard-tab {
+        transition: none;
+    }
+}

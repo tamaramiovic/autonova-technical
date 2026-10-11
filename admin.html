@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AUTONOVA | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+
+    <script src="booking.js" defer></script>
+    <script src="contact.js" defer></script>
+    <script src="admin-dashboard.js" defer></script>
+</head>
+
+<body style="margin:0;background:#090c10">
+
+<main class="admin-app">
+    <div class="admin-shell">
+
+        <header class="admin-header">
+            <div>
+                <p>AUTONOVA / INTERNAL SYSTEM / LOCAL DEMO</p>
+                <h1>ADMIN DASHBOARD.</h1>
+                <p>
+                    Centralizovano upravljanje rezervacijama
+                    i kontakt porukama.
+                </p>
+            </div>
+
+            <a href="index.html">
+                ← NA SAJT
+            </a>
+        </header>
+
+        <nav class="dashboard-tabs" aria-label="Sekcije admin panela">
+            <button
+                type="button"
+                class="dashboard-tab active"
+                data-admin-tab="reservations"
+                aria-controls="dashboard-reservations"
+                aria-selected="true"
+            >
+                <span>01</span>
+                REZERVACIJE
+                <span class="dashboard-tab-arrow">↗</span>
+            </button>
+
+            <button
+                type="button"
+                class="dashboard-tab"
+                data-admin-tab="messages"
+                aria-controls="dashboard-messages"
+                aria-selected="false"
+            >
+                <span>02</span>
+                PORUKE
+                <span class="dashboard-tab-arrow">↗</span>
+            </button>
+        </nav>
+
+        <section
+            id="dashboard-reservations"
+            class="dashboard-panel"
+            aria-label="Rezervacije"
+        >
+            <div class="dashboard-section-heading">
+                <div>
+                    <span>01 / APPOINTMENT MANAGEMENT</span>
+                    <h2>REZERVACIJE.</h2>
+                </div>
+                <p>Pregled termina, statusa i podataka o vozilima.</p>
+            </div>
+
+            <section class="admin-stats" aria-label="Statistika rezervacija">
+                <div class="admin-stat">
+                    <span>UKUPNO</span>
+                    <strong id="admin-total">0</strong>
+                </div>
+
+                <div class="admin-stat">
+                    <span>NA ČEKANJU</span>
+                    <strong id="admin-pending">0</strong>
+                </div>
+
+                <div class="admin-stat">
+                    <span>POTVRĐENO</span>
+                    <strong id="admin-confirmed">0</strong>
+                </div>
+
+                <div class="admin-stat">
+                    <span>OTKAZANO</span>
+                    <strong id="admin-cancelled">0</strong>
+                </div>
+            </section>
+
+            <div class="admin-toolbar">
+                <input
+                    id="admin-search"
+                    aria-label="Pretraži rezervacije"
+                    placeholder="Pretraga: ime, tablice, telefon, ID..."
+                >
+
+                <select id="admin-filter" aria-label="Status rezervacije">
+                    <option>Svi</option>
+                    <option>Na čekanju</option>
+                    <option>Potvrđeno</option>
+                    <option>Otkazano</option>
+                </select>
+
+                <button type="button" id="admin-clear">
+                    OBRIŠI DEMO PODATKE
+                </button>
+            </div>
+
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TERMIN</th>
+                            <th>KLIJENT</th>
+                            <th>VOZILO / KONTAKT</th>
+                            <th>USLUGA</th>
+                            <th>STATUS</th>
+                            <th>AKCIJE</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="admin-bookings"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section
+            id="dashboard-messages"
+            class="dashboard-panel"
+            aria-label="Kontakt poruke"
+            hidden
+        >
+            <div class="dashboard-section-heading">
+                <div>
+                    <span>02 / INBOX MANAGEMENT</span>
+                    <h2>KONTAKT PORUKE.</h2>
+                </div>
+                <p>Pregled pristiglih upita i upravljanje odgovorima.</p>
+            </div>
+
+            <section class="admin-messages" id="poruke">
+                <div class="admin-message-stats">
+                    <div class="admin-message-stat">
+                        <span>UKUPNO PORUKA</span>
+                        <strong id="admin-messages-total">0</strong>
+                    </div>
+
+                    <div class="admin-message-stat">
+                        <span>NEPROČITANO</span>
+                        <strong id="admin-messages-unread">0</strong>
+                    </div>
+
+                    <div class="admin-message-stat">
+                        <span>OBRAĐENO</span>
+                        <strong id="admin-messages-done">0</strong>
+                    </div>
+                </div>
+
+                <div class="admin-message-toolbar">
+                    <input
+                        id="admin-message-search"
+                        type="search"
+                        placeholder="Pretraži poruke..."
+                        aria-label="Pretraži kontakt poruke"
+                    >
+
+                    <select
+                        id="admin-message-filter"
+                        aria-label="Filtriraj poruke"
+                    >
+                        <option>Svi</option>
+                        <option>Nepročitano</option>
+                        <option>Pročitano</option>
+                        <option>Obrađeno</option>
+                    </select>
+
+                    <button
+                        type="button"
+                        id="admin-messages-clear"
+                    >
+                        OBRIŠI SVE PORUKE
+                    </button>
+                </div>
+
+                <div
+                    id="admin-message-list"
+                    class="admin-message-list"
+                    aria-live="polite"
+                ></div>
+            </section>
+        </section>
+
+        <footer class="dashboard-footer">
+            <span>AUTONOVA © 2026</span>
+            <span>INTERNAL SYSTEM / PORTFOLIO DEMO</span>
+            <span>LOCAL STORAGE MODE</span>
+        </footer>
+
+        <p class="admin-note">
+            Portfolio demonstracija. Rezervacije i kontakt poruke
+            čuvaju se samo u localStorage ovog browsera.
+            Sistem nema autentifikaciju, zajedničku bazu podataka
+            ni stvarnu obradu zahteva. Nije namenjen
+            produkcionoj upotrebi.
+        </p>
+
+    </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AUTONOVA - Centar za tehnički pregled, registraciju i osiguranje vozila.">
+    <title>AUTONOVA | Tehnički pregled i registracija</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <a class="brand" href="#pocetna" aria-label="AUTONOVA početna">
+        <svg class="brand-mark" viewBox="0 0 70 70" aria-hidden="true">
+            <path d="M7 57 31 9h13L23 57Z" fill="currentColor"/>
+            <path d="m39 33 9-17 16 41H49l-5-13H30l6-11Z" fill="currentColor"/>
+            <path d="m28 60 9-12h19l7 12Z" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">
+            <strong>AUTONOVA</strong>
+            <small>CENTAR ZA TEHNIČKI PREGLED</small>
+        </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Glavna navigacija">
+        <a class="active" href="#pocetna">Početna</a>
+        <a href="#usluge">Usluge</a>
+        <a href="#tehnicki">Tehnički pregled</a>
+        <a href="#registracija">Registracija</a>
+        <a href="#kalkulator">Kalkulator</a>
+        <a href="#zakazivanje">Zakazivanje</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a href="#zakazivanje" class="header-cta">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="16" rx="2"/>
+            <path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3M7 18h3"/>
+        </svg>
+        ZAKAŽI TERMIN
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Otvori meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<main>
+
+<section class="hero" id="pocetna">
+    <div class="hero-shade"></div>
+
+    <div class="slide-indicator" aria-label="Trenutna sekcija">
+        <span class="slide-current">01</span>
+        <span>02</span>
+        <span>03</span>
+    </div>
+
+    <div class="hero-content">
+        <div class="eyebrow">
+            <span>SIGURNO. BRZO. POUZDANO.</span>
+            <i></i>
+        </div>
+
+        <h1>
+            SPREMNI
+            <span>ZA PUT.</span>
+        </h1>
+
+        <p class="hero-description">
+            Tehnički pregled, registracija i osiguranje vozila.<br>
+            Sve na jednom mestu.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#zakazivanje" class="action-primary">
+                <span class="action-icon">▦</span>
+                <span>ZAKAŽI TEHNIČKI PREGLED</span>
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="#kalkulator" class="action-secondary">
+                <span class="action-icon">▤</span>
+                <span>IZRAČUNAJ REGISTRACIJU</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="inspection-panel">
+        <div class="inspection-symbol">A</div>
+
+        <div class="inspection-item">
+            <span class="inspection-icon">◎</span>
+            <span>KOČNICE</span>
+        </div>
+
+        <div class="inspection-item">
+            <span class="inspection-icon">◉</span>
+            <span>SVETLA</span>
+        </div>
+
+        <div class="inspection-item">
+            <span class="inspection-icon">◈</span>
+            <span>PNEUMATICI</span>
+        </div>
+
+        <div class="inspection-item">
+            <span class="inspection-icon">◇</span>
+            <span>IZDUVNI<br>SISTEM</span>
+        </div>
+
+        <div class="inspection-item">
+            <span class="inspection-icon">⌁</span>
+            <span>PODVOZJE</span>
+        </div>
+    </div>
+
+    <div class="hero-footer">
+        <div class="footer-feature">
+            <div class="feature-icon">ϟ</div>
+            <div>
+                <strong>BRZA USLUGA</strong>
+                <span>Bez čekanja i komplikacija.</span>
+            </div>
+        </div>
+
+        <div class="footer-feature">
+            <div class="feature-icon">♢</div>
+            <div>
+                <strong>SIGURNOST</strong>
+                <span>Provera ispravnosti vozila.</span>
+            </div>
+        </div>
+
+        <div class="footer-feature">
+            <div class="feature-icon">▤</div>
+            <div>
+                <strong>KOMPLETNA USLUGA</strong>
+                <span>Registracija i osiguranje.</span>
+            </div>
+        </div>
+
+        <div class="footer-feature">
+            <div class="feature-icon">⌖</div>
+            <div>
+                <strong>LOKACIJA</strong>
+                <span>Novi Sad · Demo lokacija</span>
+            </div>
+        </div>
+
+        <a class="scroll-cue" href="#usluge">
+            <span class="mouse-icon"></span>
+            <span>SKROLUJ<br>DA SAZNAŠ VIŠE</span>
+        </a>
+    </div>
+</section>
+
+<section class="inspection-section" id="tehnicki">
+    <div class="inspection-heading">
+        <div class="inspection-heading-top">
+            <span>01 / DIGITALNA INSPEKCIJA</span>
+            <span>PRECIZNOST U SVAKOM DETALJU</span>
+        </div>
+
+        <h2>SVAKI DETALJ<br><span>JE VAŽAN.</span></h2>
+
+        <p>
+            Istražite ključne elemente koji se proveravaju
+            tokom tehničkog pregleda vozila.
+        </p>
+    </div>
+
+    <div class="inspection-stage">
+        <div class="inspection-visual">
+            <img src="assets/inspection-car.png"
+                 alt="Automobil prikazan sa strane tokom digitalne inspekcije">
+
+            <div class="scan-line"></div>
+
+            <button class="car-point point-brakes active"
+                    data-inspection="brakes"
+                    aria-label="Kočioni sistem">
+                <span></span>
+            </button>
+
+            <button class="car-point point-lights"
+                    data-inspection="lights"
+                    aria-label="Svetlosna signalizacija">
+                <span></span>
+            </button>
+
+            <button class="car-point point-tires"
+                    data-inspection="tires"
+                    aria-label="Pneumatici">
+                <span></span>
+            </button>
+
+            <button class="car-point point-exhaust"
+                    data-inspection="exhaust"
+                    aria-label="Izduvni sistem">
+                <span></span>
+            </button>
+
+            <button class="car-point point-steering"
+                    data-inspection="steering"
+                    aria-label="Upravljanje i oslanjanje">
+                <span></span>
+            </button>
+        </div>
+
+        <div class="inspection-info">
+            <span class="inspection-info-label">
+                DIGITAL INSPECTION / 01
+            </span>
+
+            <h3 id="inspection-title">KOČIONI SISTEM</h3>
+
+            <p id="inspection-description">
+                Provera efikasnosti kočenja i ispravnosti
+                kočionog sistema vozila.
+            </p>
+
+            <div class="inspection-progress">
+                <span>01</span>
+                <div class="progress-track">
+                    <div class="progress-fill"></div>
+                </div>
+                <span>05</span>
+            </div>
+
+            <div class="inspection-controls">
+                <button id="inspection-prev" aria-label="Prethodni element">←</button>
+                <button id="inspection-next" aria-label="Sledeći element">→</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="inspection-bottom">
+        <span>BEZBEDNOST POČINJE PROVEROM.</span>
+        <a href="#zakazivanje">
+            ZAKAŽI TEHNIČKI PREGLED <span>&#8599;&#65038;</span>
+        </a>
+    </div>
+</section>
+
+<section class="services-section" id="usluge">
+    <div class="services-container">
+
+        <div class="services-top">
+            <span>02 / NAŠE USLUGE</span>
+            <span>SVE ŠTO JE VAŠEM VOZILU POTREBNO.</span>
+        </div>
+
+        <div class="services-heading">
+            <h2>JEDNO MESTO.<br><span>SVAKO REŠENJE.</span></h2>
+            <p>
+                Od tehničkog pregleda do registracije i osiguranja.
+                Jednostavnije, brže i bez nepotrebnih komplikacija.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <article class="service-card service-card-technical">
+                <div class="service-overlay"></div>
+                <div class="service-number">01 / 03</div>
+
+                <div class="service-content">
+                    <span class="service-category">BEZBEDNOST VOZILA</span>
+                    <h3>TEHNIČKI<br>PREGLED</h3>
+                    <p>
+                        Profesionalna kontrola tehničke ispravnosti
+                        vašeg vozila uz jednostavno zakazivanje termina.
+                    </p>
+                    <a href="#zakazivanje">
+                        ZAKAŽI PREGLED <span>&#8599;&#65038;</span>
+                    </a>
+                </div>
+
+                <span class="service-corner">&#8599;&#65038;</span>
+            </article>
+
+            <article class="service-card service-card-registration">
+                <div class="service-overlay"></div>
+                <div class="service-number">02 / 03</div>
+
+                <div class="service-content">
+                    <span class="service-category">DOKUMENTACIJA I REGISTRACIJA</span>
+                    <h3>REGISTRACIJA<br>VOZILA</h3>
+                    <p>
+                        Informacije o postupku registracije i
+                        jednostavan obračun okvirnih troškova.
+                    </p>
+                    <a href="#kalkulator">
+                        IZRAČUNAJ TROŠKOVE <span>&#8599;&#65038;</span>
+                    </a>
+                </div>
+
+                <span class="service-corner">&#8599;&#65038;</span>
+            </article>
+
+            <article class="service-card service-card-insurance">
+                <div class="service-overlay"></div>
+                <div class="service-number">03 / 03</div>
+
+                <div class="service-content">
+                    <span class="service-category">ZAŠTITA NA PUTU</span>
+                    <h3>OSIGURANJE<br>VOZILA</h3>
+                    <p>
+                        Informišite se o mogućnostima osiguranja
+                        i pronađite odgovarajuću zaštitu za svoje vozilo.
+                    </p>
+                    <a href="#kontakt">
+                        SAZNAJ VIŠE <span>&#8599;&#65038;</span>
+                    </a>
+                </div>
+
+                <span class="service-corner">&#8599;&#65038;</span>
+            </article>
+
+        </div>
+
+        <div class="services-bottom">
+            <span>AUTONOVA / KOMPLETNA USLUGA ZA VAŠE VOZILO</span>
+            <span>03 USLUGE — JEDAN CENTAR</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="registration-guide" id="registracija">
+    <div class="registration-guide-inner">
+
+        <div class="registration-guide-top">
+            <span>03 / REGISTRACIJA VOZILA</span>
+            <span>AUTONOVA / DIGITAL GUIDE</span>
+        </div>
+
+        <div class="registration-guide-heading">
+            <h2>BEZ DILEME.<br><span>BEZ KOMPLIKACIJA.</span></h2>
+            <p>Saznajte šta vam je potrebno za registraciju vozila kroz nekoliko jednostavnih koraka.</p>
+        </div>
+
+        <div class="registration-guide-layout">
+            <div class="registration-guide-panel">
+                <span class="registration-guide-label">01 / IZABERITE POSTUPAK</span>
+
+                <div class="registration-options">
+                    <button type="button" class="registration-option active" data-type="renewal" aria-pressed="true">
+                        <span>01</span>
+                        <strong>PRODUŽENJE REGISTRACIJE</strong>
+                        <span>&#8599;&#65038;</span>
+                    </button>
+
+                    <button type="button" class="registration-option" data-type="first" aria-pressed="false">
+                        <span>02</span>
+                        <strong>PRVA REGISTRACIJA</strong>
+                        <span>&#8599;&#65038;</span>
+                    </button>
+
+                    <button type="button" class="registration-option" data-type="ownership" aria-pressed="false">
+                        <span>03</span>
+                        <strong>PROMENA VLASNIKA</strong>
+                        <span>&#8599;&#65038;</span>
+                    </button>
+                </div>
+
+                <p class="registration-guide-note">
+                    Informativni vodič. Potrebna dokumentacija zavisi od konkretnog vozila i postupka.
+                </p>
+            </div>
+
+            <div class="registration-guide-panel registration-guide-result" aria-live="polite">
+                <span class="registration-guide-label">02 / VAŠ VODIČ</span>
+                <h3 id="registration-guide-title"></h3>
+                <p id="registration-guide-description"></p>
+                <div class="registration-guide-subtitle">OSNOVNA DOKUMENTACIJA I KORACI</div>
+                <div id="registration-guide-items"></div>
+
+                <a href="#zakazivanje" class="registration-guide-cta">
+                    ZAKAŽI TERMIN <span>&#8599;&#65038;</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="calculator-section" id="kalkulator">
+    <div class="calculator-container">
+
+        <div class="calculator-top">
+            <span>03 / KALKULATOR REGISTRACIJE</span>
+            <span>AUTONOVA / SMART SERVICES</span>
+        </div>
+
+        <div class="calculator-heading">
+            <h2>TVOJE VOZILO.<br><span>TVOJ OBRAČUN.</span></h2>
+            <p>Unesite podatke o vozilu i pogledajte demonstracionu procenu troškova registracije.</p>
+        </div>
+
+        <div class="calculator-layout">
+            <form class="calculator-form" id="registration-form">
+
+                <div class="calculator-form-top">
+                    <span>01 / PODACI O VOZILU</span>
+                    <span>● DEMO KALKULATOR</span>
+                </div>
+
+                <div class="calculator-fields">
+                    <div class="calculator-field">
+                        <label for="vehicle-cc">ZAPREMINA MOTORA (cm³)</label>
+                        <input type="number" id="vehicle-cc" min="500" max="8000" placeholder="Npr. 1598" required>
+                    </div>
+
+                    <div class="calculator-field">
+                        <label for="vehicle-kw">SNAGA MOTORA (kW)</label>
+                        <input type="number" id="vehicle-kw" min="1" max="1000" placeholder="Npr. 85" required>
+                    </div>
+
+                    <div class="calculator-field">
+                        <label for="vehicle-year">GODINA PROIZVODNJE</label>
+                        <input type="number" id="vehicle-year" min="1980" max="2026" placeholder="Npr. 2018" required>
+                    </div>
+
+                    <div class="calculator-field">
+                        <label for="vehicle-fuel">VRSTA GORIVA</label>
+                        <select id="vehicle-fuel" required>
+                            <option value="">Izaberite gorivo</option>
+                            <option value="benzin">Benzin</option>
+                            <option value="dizel">Dizel</option>
+                            <option value="hibrid">Hibrid</option>
+                            <option value="elektricni">Električni pogon</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="calculator-submit">
+                    IZRAČUNAJ REGISTRACIJU
+                    <span>&#8599;&#65038;</span>
+                </button>
+
+                <p class="calculator-disclaimer">
+                    Kalkulator je demonstracioni portfolio projekat.
+                    Prikazani iznosi nisu zvanične cene registracije.
+                </p>
+            </form>
+
+            <div class="calculator-result">
+                <div class="calculator-result-top">
+                    <span>02 / PROCENA TROŠKOVA</span>
+                    <span>RSD</span>
+                </div>
+
+                <div class="calculator-result-body">
+                    <span class="result-eyebrow">INFORMATIVNI OBRAČUN</span>
+                    <div class="result-amount" id="registration-total">—</div>
+                    <p id="registration-message">
+                        Popunite podatke o vozilu kako biste videli demonstracioni obračun.
+                    </p>
+
+                    <div class="result-divider"></div>
+
+                    <div class="result-row">
+                        <span>DEMO OSNOVNI TROŠAK</span>
+                        <strong id="result-base">—</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>DEMO DODATAK PREMA SNAZI</span>
+                        <strong id="result-power">—</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>DEMO DODATAK PREMA ZAPREMINI</span>
+                        <strong id="result-capacity">—</strong>
+                    </div>
+                </div>
+
+                <div class="calculator-result-bottom">
+                    <span>INFORMATIVNO / NIJE ZVANIČNA PONUDA</span>
+                    <span>&#8599;&#65038;</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="zakazivanje" class="booking-section">
+    <div class="booking-wrap">
+
+        <div class="booking-kicker">
+            <span>04 / ONLINE ZAKAZIVANJE</span>
+            <span>AUTONOVA DIGITAL SERVICES</span>
+        </div>
+
+        <header class="booking-heading">
+            <div>
+                <p>YOUR TIME. YOUR DRIVE.</p>
+                <h2>TERMIN PO<br><span>TVOJOJ MERI.</span></h2>
+            </div>
+
+            <p class="booking-intro">
+                Bez čekanja i nepotrebnih poziva.
+                Izaberite uslugu, datum i slobodan termin.
+            </p>
+        </header>
+
+        <div class="booking-layout">
+            <div class="booking-panel">
+
+                <div class="booking-panel-heading">
+                    <span>01 / IZABERITE TERMIN</span>
+                    <span class="booking-status">● DEMO SISTEM</span>
+                </div>
+
+                <label class="booking-label" for="booking-service">
+                    VRSTA USLUGE
+                </label>
+
+                <select id="booking-service" class="booking-control">
+                    <option value="Tehnički pregled">Tehnički pregled</option>
+                    <option value="Tehnički pregled i registracija">
+                        Tehnički pregled i registracija
+                    </option>
+                    <option value="Registracija vozila">
+                        Registracija vozila
+                    </option>
+                </select>
+
+                <div class="booking-calendar-header">
+                    <button type="button" id="booking-prev" aria-label="Prethodni mesec">←</button>
+                    <h3 id="booking-month"></h3>
+                    <button type="button" id="booking-next" aria-label="Sledeći mesec">→</button>
+                </div>
+
+                <div class="booking-weekdays">
+                    <span>PON</span><span>UTO</span><span>SRE</span>
+                    <span>ČET</span><span>PET</span><span>SUB</span>
+                    <span>NED</span>
+                </div>
+
+                <div id="booking-calendar" class="booking-calendar"></div>
+
+                <div class="booking-legend">
+                    <span><i class="legend-available"></i> Dostupno</span>
+                    <span><i class="legend-selected"></i> Izabrano</span>
+                    <span><i class="legend-unavailable"></i> Nedostupno</span>
+                </div>
+
+                <div class="booking-times-heading">
+                    <span>02 / SLOBODNI TERMINI</span>
+                    <span id="booking-selected-date">Izaberite datum</span>
+                </div>
+
+                <div id="booking-times" class="booking-times"></div>
+            </div>
+
+            <form id="booking-form" class="booking-panel booking-form">
+
+                <div class="booking-panel-heading">
+                    <span>03 / PODACI ZA REZERVACIJU</span>
+                    <span>SECURE DESIGN / DEMO</span>
+                </div>
+
+                <div class="booking-summary">
+                    <span>VAŠ IZABRANI TERMIN</span>
+                    <strong id="booking-summary-date">Datum nije izabran</strong>
+                    <strong id="booking-summary-time">—</strong>
+                </div>
+
+                <div class="booking-form-grid">
+                    <div>
+                        <label for="booking-name">IME I PREZIME *</label>
+                        <input id="booking-name" required maxlength="80"
+                               autocomplete="name" placeholder="Ime i prezime">
+                    </div>
+
+                    <div>
+                        <label for="booking-phone">BROJ TELEFONA *</label>
+                        <input id="booking-phone" type="tel" required
+                               maxlength="25" autocomplete="tel"
+                               placeholder="06X XXX XXXX">
+                    </div>
+
+                    <div>
+                        <label for="booking-email">EMAIL ADRESA</label>
+                        <input id="booking-email" type="email"
+                               maxlength="120" autocomplete="email"
+                               placeholder="email@example.com">
+                    </div>
+
+                    <div>
+                        <label for="booking-plate">REGISTARSKA OZNAKA *</label>
+                        <input id="booking-plate" required maxlength="20"
+                               placeholder="NS 123 AB">
+                    </div>
+
+                    <div class="booking-full">
+                        <label for="booking-note">NAPOMENA</label>
+                        <textarea id="booking-note" maxlength="500"
+                                  rows="4" placeholder="Dodatne informacije (opciono)"></textarea>
+                    </div>
+                </div>
+
+                <label class="booking-consent">
+                    <input type="checkbox" id="booking-consent" required>
+                    <span>
+                        Razumem da je ovo demonstracioni sistem i da
+                        rezervacija nije poslata stvarnom servisu.
+                    </span>
+                </label>
+
+                <button type="submit" class="booking-submit">
+                    POTVRDI REZERVACIJU <span>&#8599;&#65038;</span>
+                </button>
+
+                <p id="booking-feedback" class="booking-feedback"
+                   role="status" aria-live="polite"></p>
+            </form>
+        </div>
+
+        <div id="booking-confirmation" class="booking-confirmation"
+             hidden aria-live="polite">
+            <span>✓ REZERVACIJA JE EVIDENTIRANA</span>
+            <h3 id="booking-confirmation-id"></h3>
+            <p id="booking-confirmation-details"></p>
+            <button type="button" id="booking-new">
+                ZAKAŽI NOVI TERMIN &#8599;&#65038;
+            </button>
+        </div>
+
+        <div class="booking-footer">
+            <span>AUTONOVA / SMART BOOKING EXPERIENCE</span>
+            <a href="admin.html">ADMIN DEMO &#8599;&#65038;</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact-section" id="kontakt">
+    <div class="contact-container">
+
+        <div class="contact-top">
+            <span>05 / KONTAKT</span>
+            <span>AUTONOVA / CONNECT WITH US</span>
+        </div>
+
+        <div class="contact-heading">
+            <h2>SVAKO PITANJE.<br><span>IMA SVOJ ODGOVOR.</span></h2>
+            <p>
+                Tehnički pregled, registracija ili osiguranje?
+                Pošaljite nam poruku kroz demonstracioni kontakt sistem.
+            </p>
+        </div>
+
+        <div class="contact-layout">
+            <div class="contact-info">
+                <span class="contact-eyebrow">01 / INFORMACIJE</span>
+
+                <div class="contact-info-block">
+                    <span>EMAIL</span>
+                    <h3>demo@autonova.example</h3>
+                </div>
+
+                <div class="contact-info-block">
+                    <span>TELEFON</span>
+                    <h3>DEMO KONTAKT</h3>
+                </div>
+
+                <div class="contact-info-block">
+                    <span>LOKACIJA</span>
+                    <h3>SOMBOR, SRBIJA</h3>
+                    <p>Demonstraciona lokacija — nije stvarna poslovnica.</p>
+                </div>
+
+                <div class="contact-info-block">
+                    <span>RADNO VREME / PRIMER</span>
+                    <h3>PON — SUB / 08:00 — 16:00</h3>
+                    <p>Nedelja: neradni dan</p>
+                </div>
+
+                <div class="contact-map">
+                    <span>LOKACIJA / SOMBOR</span>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Sombor%2C%20Serbia"
+                       target="_blank" rel="noopener noreferrer">
+                        OTVORI MAPU <span>&#8599;&#65038;</span>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="contact-form-top">
+                    <span>02 / POŠALJITE PORUKU</span>
+                    <span>DEMO CONTACT SYSTEM</span>
+                </div>
+
+                <div class="contact-form-grid">
+                    <div class="contact-field">
+                        <label for="contact-name">IME I PREZIME *</label>
+                        <input id="contact-name" name="name" required
+                               maxlength="80" autocomplete="name"
+                               placeholder="Vaše ime i prezime">
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="contact-email">EMAIL ADRESA *</label>
+                        <input id="contact-email" name="email" type="email"
+                               required maxlength="120" autocomplete="email"
+                               placeholder="email@example.com">
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="contact-phone">BROJ TELEFONA</label>
+                        <input id="contact-phone" name="phone" type="tel"
+                               maxlength="25" autocomplete="tel"
+                               placeholder="06X XXX XXXX">
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="contact-service">VRSTA USLUGE *</label>
+                        <select id="contact-service" name="service" required>
+                            <option value="">Izaberite uslugu</option>
+                            <option value="Tehnički pregled">Tehnički pregled</option>
+                            <option value="Registracija vozila">Registracija vozila</option>
+                            <option value="Osiguranje vozila">Osiguranje vozila</option>
+                            <option value="Ostalo">Ostalo</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-field contact-field-full">
+                        <label for="contact-message">VAŠA PORUKA *</label>
+                        <textarea id="contact-message" name="message"
+                                  rows="6" required minlength="10"
+                                  maxlength="2000"
+                                  placeholder="Kako možemo da vam pomognemo?"></textarea>
+                    </div>
+                </div>
+
+                <label class="contact-consent">
+                    <input type="checkbox" id="contact-consent" required>
+                    <span>
+                        Razumem da je ovo portfolio demonstracija i da
+                        poruka neće biti poslata stvarnoj kompaniji.
+                    </span>
+                </label>
+
+                <button type="submit" class="contact-submit">
+                    POŠALJI PORUKU <span>&#8599;&#65038;</span>
+                </button>
+
+                <p id="contact-feedback" class="contact-feedback"
+                   role="status" aria-live="polite"></p>
+            </form>
+        </div>
+
+        <footer class="contact-footer">
+            <div>
+                <strong>AUTONOVA.</strong>
+                <p>PRECISION IN EVERY DETAIL.</p>
+            </div>
+
+            <div class="contact-footer-links">
+                <a href="#pocetna">POČETNA</a>
+                <a href="#usluge">USLUGE</a>
+                <a href="#registracija">REGISTRACIJA</a>
+                <a href="#zakazivanje">ZAKAZIVANJE</a>
+            </div>
+
+            <span>© AUTONOVA / PORTFOLIO DEMO</span>
+        </footer>
+
+    </div>
+</section>
+
+</main>
+
+<script src="booking.js" defer></script>
+<script src="contact.js" defer></script>
+
+</body>
+</html>
